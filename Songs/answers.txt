@@ -1,0 +1,6 @@
+The Audio Aura of a user can be characterized by selecting the average of energy, valence
+and danceability of the listener's top 100 songs from 2018.
+
+In order to provide the listener with a more personalized 'Audio Aura', the latter could be
+calculated by averaging over, not only the energy, valence and redability, but also the tempo
+and loudness of the user's top 100 songs.

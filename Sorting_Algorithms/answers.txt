@@ -1,0 +1,32 @@
+THE EXECUTABLES WON'T WORK ANYMORE
+
+
+sort1 uses: Bubble Sort
+
+How do you know?:
+    Time for sorting random50000.txt: between 5.60s and 5.54s
+    Time for sorting reversed50000.txt: between 5.10s and 4.90s
+    Time for sorting sorted50000.txt: between 0.46s and 0.38s
+Time needed for sorting numbers does depend on the initial arrangement of the
+numbers themselves: the lower and upper bounds are not the same.
+Moreover, the running time for non-sorted(sorted) numbers is very high(low).
+
+sort2 uses: Merge Sort
+
+How do you know?:
+    Time for sorting random50000.txt: between 0.51s and 0.41s
+    Time for sorting reversed50000.txt: between 0.50s and 0.39s
+    Time for sorting sorted50000.txt: between 0.47s and 0.39s
+Time needed for sorting numbers does not depend on the initial arrangement of the
+numbers themselves: the lower and upper bounds are the same.
+Moreover, the running time is very low.
+
+sort3 uses: Selection Sort
+
+How do you know?:
+    Time for sorting random50000.txt: between 2.31s and 2.14s
+    Time for sorting reversed50000.txt: between 2.50s and 2.42s
+    Time for sorting sorted50000.txt: between 2.24s and 2.16s
+Time needed for sorting numbers does not depend on the initial arrangement of the
+numbers themselves: the lower and upper bounds are the same.
+Moreover, the running time is rather high.
