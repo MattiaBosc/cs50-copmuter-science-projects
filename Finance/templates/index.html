@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Summary
+{% endblock %}
+
+{% block main %}
+    <table>
+        <tr>
+            <th colspan="4" scope="colgroup" style="text-align:center"> {{ username }}</th>
+        </tr>
+        <tr>
+            <th scope="col">Stocks</th>
+            <th scope="col">Number of Shares</th>
+            <th scope="col">Current Price</th>
+            <th scope="col">Value</th>
+        </tr>
+        {% for dict in info %}
+            <tr>
+                <td>{{ dict.symbol }}</td>
+                <td>{{ dict.shares | int }}</td>
+                <td>{{ dict.price | usd }}</td>
+                <td>{{ dict.value | usd}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <table style="margin-top:1rem">
+        <tr>
+            <th scope="col">Total Cash</th>
+            <th scope="col">Total Stocks</th>
+            <th scope="col">Grand Total</th>
+        </tr>
+        <tr>
+            <td>{{ cash | usd }}</td>
+            <td>{{ total_stocks | usd }}</td>
+            <td>{{ grand_total | usd }}</td>
+        </tr>
+    </table>
+{% endblock %}

@@ -1,0 +1,27 @@
+HTML tags:
+1.  <div>
+2.  <img>
+3.  <button>
+4.  <a>
+5.  <p>
+6.  <iframe>
+7.  <label>
+8.  <input>
+9.  <select>
+10. <textarea>
+and more...
+
+CSS properties:
+1. position
+2. font-size
+3. animation
+4. color
+5. cursor
+and more...
+
+Bootstrap:
+Implementation of the dropdown menu in the homepage of my website.
+
+Javascript:
+Animation of most of the links throughout the four pages of my website.
+Confirmation of submission of the contact form.

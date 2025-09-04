@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table>
+        <tr>
+            <th colspan="5" scope="colgroup" style="text-align:center"> {{ username }}</th>
+        </tr>
+        <tr>
+            <th scope="col">Stock</th>
+            <th scope="col">Number of Shares</th>
+            <th scope="col">Price</th>
+            <th scope="col">Transaction</th>
+            <th scope="col">Date & Time (UTC)</th>
+        </tr>
+        {% for dict in info %}
+            <tr>
+                <td>{{ dict.symbol }}</td>
+                <td>{{ dict.shares | int }}</td>
+                <td>{{ dict.price | usd }}</td>
+                <td>{{ dict.type }}</td>
+                <td>{{ dict.date }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

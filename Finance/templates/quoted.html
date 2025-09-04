@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stock's Price for {{ symbol }}
+{% endblock %}
+
+{% block main %}
+    <table>
+        <tr>
+            <th>Symbol</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>{{ symbol }}</td>
+            <td>{{ price  | usd  }}</td>
+        </tr>
+    </table>
+{% endblock %}

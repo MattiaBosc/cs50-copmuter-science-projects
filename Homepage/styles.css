@@ -1,0 +1,136 @@
+@keyframes name {
+    from {
+        left: 50%;
+        top: 70%;
+        opacity: 0;
+    }
+
+    to {
+        left: 50%;
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 1;
+}
+
+.title {
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 70px;
+    font-family: "Times New Roman", serif;
+    font-variant: small-caps;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: name;
+    animation-duration: 3s;
+}
+
+.section {
+    color: white;
+    font-weight: bold;
+    margin-left: 37%;
+    margin-right: 5%;
+}
+
+.header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.other_header {
+    background-color: grey;
+    text-shadow: 1px 1px #000000;
+    font-weight: bold;
+    font-family: "Times New Roman", serif;
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding: 2%;
+    text-align: center;
+}
+
+.left_margin {
+    font-family: "Times New Roman", serif;
+    text-shadow: 1px 1px #000000;
+    color: #fff;
+    margin-bottom: 2rem;
+    font-size: 30px;
+    margin-top: 2rem;
+    margin-left: 0rem;
+    margin-right: 80%;
+    padding: 0.25rem;
+    text-align: center;
+}
+
+.right_margin {
+    font-family: "Times New Roman", serif;
+    text-shadow: 1px 1px #000000;
+    color: white;
+    margin-bottom: 2rem;
+    font-size: 30px;
+    margin-top: 2rem;
+    margin-left: 0%;
+    margin-right: 5%;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.main {
+    font-family: "Times New Roman", serif;
+    text-align: justify;
+    color: black;
+    margin-bottom: 5rem;
+    font-size: 20px;
+    margin-left: 30%;
+    margin-right: 5%;
+    padding: 1rem;
+}
+
+.dropdown {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.80;
+}
+
+input[type=text],
+input[type=email],
+input[type=number],
+select,
+textarea {
+    width: 50%;
+    padding: 10px;
+    border: 2px solid #c9c9c9;
+    border-radius: 20px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: rgba(2, 171, 183, 0.400);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgba(2, 171, 183, 0.699);
+}
