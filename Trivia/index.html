@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var buttons = document.querySelectorAll('button');
+                buttons.forEach(function(x) {
+                    x.addEventListener('click', function() {
+                        if (x.id == 'A' || x.id == 'C') {
+                            x.style.backgroundColor = 'red';
+                            document.querySelector('#incorrect').style.display = 'inline';
+                            document.querySelector('#correct').style.display = 'none';
+                        } else {
+                            x.style.backgroundColor = 'green';
+                            document.querySelector('#correct').style.display = 'inline';
+                            document.querySelector('#incorrect').style.display = 'none';
+                        }
+                    });
+                });
+
+                document.querySelector('form').addEventListener('submit', function(event) {
+                    event.preventDefault()
+                    var capital = document.getElementById('capital').value;
+                    if (capital.toLowerCase() == 'amsterdam') {
+                        document.querySelector('#correct_capital').style.display = 'inline';
+                        document.querySelector('#incorrect_capital').style.display = 'none';
+                        document.querySelector('form input').style.backgroundColor = 'green';
+                    } else {
+                        document.querySelector('#correct_capital').style.display = 'none';
+                        document.querySelector('#incorrect_capital').style.display = 'inline';
+                        document.querySelector('form input').style.backgroundColor = 'red';
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>
+                    How many kilometers does a Dutch person cycle on average every year?
+                </h3>
+                <p id='incorrect' style='display: none;'>
+                    Incorrect!
+                </p>
+                <p id='correct' style='display: none;'>
+                    Correct!
+                </p>
+                <p>
+                    <button id='A'> A </button> 680 km
+                </p>
+                <p>
+                    <button id='B'> B </button> 780 km
+                </p>
+                <p>
+                    <button id='C'> C </button> 880 km
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>
+                    What is the capital of The Netherlands?
+                </h3>
+                <p id='correct_capital' style='display: none;'>
+                    Correct!
+                </p>
+                <p id='incorrect_capital' style='display: none;'>
+                    Incorrect!
+                </p>
+                <form>
+                    <input autocomplete='off' id='capital' placeholder='Type here'>
+                    <input type='submit' value='Confirm'>
+                </form>
+            </div>
+        </div>
+    </body>
+
+</html>
